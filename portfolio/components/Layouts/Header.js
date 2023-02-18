@@ -1,6 +1,13 @@
 import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
+
   return (
     <div className="relative">
       <video className="w-full h-full object-cover z-0" autoPlay loop muted>
@@ -32,51 +39,71 @@ const Header = () => {
             Contact
           </Link>
         </div>
-        <div id="nav-open" className="p-4 md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <div id="nav-open" className="p-4 md:hidden" onClick={toggleMobileMenu}>
+          {showMobileMenu ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-x"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          )}
         </div>
       </nav>
 
-      <div
-        id="nav-opened"
-        className="fixed left-0 right-0 hidden bg-white mx-2 mt-16 rounded-br rounded-bl shadow z-50 px-4 md:px-10"
-      >
-        <div className="p-2 divide-y divide-gray-600 flex flex-col">
-          <Link
-            href="/#about"
-            className="p-2 font-semibold hover:text-indigo-700"
-          >
-            About
-          </Link>
-          <Link
-            href="/#contactus"
-            className="p-2 font-semibold hover:text-indigo-700"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/#products"
-            className="p-2 font-semibold hover:text-indigo-700"
-          >
-            Contact
-          </Link>
+      {showMobileMenu && (
+        <div
+          id="nav-opened"
+          className="absolute text-center top-16 bottom-0 left-0 right-0 bg-white shadow z-50 px-4 md:px-10"
+        >
+          <div className="p-2 divide-y divide-gray-600 flex flex-col">
+            <Link
+              href="/#about"
+              className="p-2 font-semibold hover:text-indigo-700"
+            >
+              About
+            </Link>
+            <Link
+              href="/#contactus"
+              className="p-2 font-semibold hover:text-indigo-700"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/#products"
+              className="p-2 font-semibold hover:text-indigo-700"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
