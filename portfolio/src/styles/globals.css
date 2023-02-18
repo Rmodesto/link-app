@@ -3,12 +3,9 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://use.typekit.net/kuu4qka.css");
 
-background {
-  background-color: transparent;
-  background-image: url("/public/assets/star.mp4");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+@font-face {
+  font-family: "nasalization";
+  src: url(/pages/nasa.otf);
 }
