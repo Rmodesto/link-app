@@ -2,21 +2,17 @@ import { useState } from "react";
 import ArrowBack from "./ArrowBack";
 import ArrowNext from "./ArrowNext";
 
-// import react slick
 import Slider from "react-slick";
 
-const HoverText = ({ text }) => {
-  return (
-    <div className="hover-text">
-      <p>{text}</p>
-      {/* add any icons or other elements here */}
-    </div>
-  );
-};
+{
+  /*} React component called "Project" that displays a slider of 
+ project cards with images, names, and tech stacks. The component 
+ imports and uses other components such as "ArrowBack", "ArrowNext",
+ and "Slider" from react-slick libraries.*/
+}
 
 const Project = ({
   listProject = [
-    // project data here
     {
       name: "Ecommerce",
       image: "/assets/couch.png",
@@ -99,6 +95,10 @@ const Project = ({
     ],
   };
 
+  /* state and event handlers to track the active index of the hovered 
+ project card and to display additional information about the project
+ on hover */
+
   const [sliderRef, setSliderRef] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -115,7 +115,23 @@ const Project = ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     minHeight: "200px",
+    transition: "all 0.3s ease-in-out",
+    ":hover": {
+      backdropFilter: "blur(20px)",
+
+      backgroundColor: "#d1d5db",
+    },
   });
+
+  // function "HoverText" that takes a single prop called "text"
+  const HoverText = ({ text }) => {
+    return (
+      <div className="hover-text">
+        <p>{text}</p>
+        {/* add icons or other elements here */}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -123,12 +139,12 @@ const Project = ({
         {...settings}
         arrows={false}
         ref={setSliderRef}
-        className="flex items-stretch justify-items-stretch bg-black-500"
+        className="flex items-stretch justify-items-stretch  bg-black-500"
       >
         {listProject.map((listProjects, index) => (
           <div className="px-3" key={index}>
             <div
-              className={`border-2 border-gray-500 transition-all rounded-lg flex flex-col ${
+              className={`border-2 border-gray-500 hover:border-blue hover:bg-blur  transition-all rounded-lg flex flex-col ${
                 activeIndex === index ? "hover" : ""
               }`}
               style={cardStyle(listProjects.image)}
@@ -144,7 +160,11 @@ const Project = ({
                       )}
                     </p>
                     <p className="text-sm text-black-500 capitalize">
-                      {Object.values(listProjects.stack).join(", ")}
+                      {activeIndex === index && (
+                        <HoverText
+                          text={Object.values(listProjects.stack).join(", ")}
+                        />
+                      )}
                     </p>
                   </div>
                 </div>
@@ -162,7 +182,9 @@ const Project = ({
         ))}
       </Slider>
 
-      <div className="flex w-full items-center justify-end">
+      {/* navigation buttons for the slider */}
+
+      <div className="flex w-full bg-black-500 items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
             className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-green-500 border hover:bg-green-500 hover:text-white-500 transition-all text-green-500 cursor-pointer"

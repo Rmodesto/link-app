@@ -1,6 +1,7 @@
 import { Inter } from "@next/font/google";
 import Vortex from "components/Vortex";
 import Head from "next/head";
+import About from "../../components/About";
 import Hero from "../../components/Hero";
 import Layout from "../../components/Layouts/Layout";
 import Projects from "../../components/Projects";
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Vortex />
         <Projects />
+        <About />
       </Layout>
     </>
   );

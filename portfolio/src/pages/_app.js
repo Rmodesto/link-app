@@ -1,5 +1,6 @@
 import { Questrial } from "@next/font/google";
 import localFont from "@next/font/local";
+import "slick-carousel/slick/slick-theme.css";
 import "../styles/globals.css";
 import "../styles/slick.css";
 
