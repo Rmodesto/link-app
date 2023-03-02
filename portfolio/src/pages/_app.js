@@ -1,7 +1,7 @@
 import { Questrial } from "@next/font/google";
 import localFont from "@next/font/local";
-
 import "../styles/globals.css";
+import "../styles/slick.css";
 
 const myFont = Questrial({ subsets: ["latin"], weight: "400" });
 
