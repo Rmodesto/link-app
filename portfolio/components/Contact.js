@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="flex justify-center ">
         <h1 className="text-4xl font-bold">Contact</h1>
       </div>
-      <form className="flex flex-col space-y-4">
+      <form className="flex flex-col space-y-4" id="contact">
         <input
           type="email"
           placeholder="Email"

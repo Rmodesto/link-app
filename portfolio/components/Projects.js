@@ -140,6 +140,7 @@ const Project = ({
         arrows={false}
         ref={setSliderRef}
         className="flex items-stretch justify-items-stretch  bg-black-500"
+        id="projects"
       >
         {listProject.map((listProjects, index) => (
           <div className="px-3" key={index}>

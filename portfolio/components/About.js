@@ -8,7 +8,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex items-center bg-black-500 justify-center w-full h-screen">
+    <section
+      className="flex flex-col md:flex items-center bg-black-500 justify-center w-full h-screen"
+      id="about"
+    >
       <h1>
         <span className="text-3xl font-bold text-white">About</span>
       </h1>
