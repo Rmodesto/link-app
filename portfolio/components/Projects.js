@@ -143,7 +143,7 @@ const Project = ({
         id="projects"
       >
         {listProject.map((listProjects, index) => (
-          <div className="px-3" key={index}>
+          <div className="px-3" key={index} id="projects">
             <div
               className={`border-2 border-gray-500 hover:border-blue hover:bg-blur  transition-all rounded-lg flex flex-col ${
                 activeIndex === index ? "hover" : ""
