@@ -67,7 +67,7 @@ const Navbar = () => {
             key={item.name}
             href={item.href}
             onClick={handleLinkClick}
-            className="block mt-4 md:inline-block md:mt-0 md:ml-6"
+            className="block mt-4 md:inline-block font-acumin md:mt-0 md:ml-6"
           >
             {item.name}
           </Link>

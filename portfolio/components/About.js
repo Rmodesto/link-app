@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import SocialLink from "./SocialLinks";
 // About section  with  one column and
 //two rows in mobile view and two columns
 //and  one row in desktop view
@@ -24,6 +24,14 @@ const About = () => {
         className="rounded-full"
       />
       <h1 className="text-3xl font-bold text-white">Rafael</h1>
+      <div className="flex">
+        <SocialLink url="https://github.com/username" type="github" />
+        <SocialLink
+          url="https://www.linkedin.com/in/username"
+          type="linkedin"
+        />
+        <SocialLink url="https://twitter.com/username" type="twitter" />
+      </div>
       <p className="text-white text-center">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
