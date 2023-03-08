@@ -32,7 +32,7 @@ const About = () => {
         />
         <SocialLink url="https://twitter.com/username" type="twitter" />
       </div>
-      <p className="text-white text-center">
+      <p className="text-white text-center font-acumin">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
@@ -42,7 +42,7 @@ const About = () => {
         of Letraset sheets containing Lorem
       </p>
 
-      <p className="text-white text-center">
+      <p className="text-white text-center font-acumin">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and

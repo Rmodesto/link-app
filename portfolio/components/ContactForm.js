@@ -74,7 +74,7 @@ const Contact = () => {
               }}
               id="email"
               placeholder="Email"
-              className="border-2 border-gray-500 rounded-lg p-2"
+              className="border-2 font-acumin border-gray-500 rounded-lg p-2"
             />
             <input
               type="text"
@@ -120,7 +120,7 @@ const Contact = () => {
               <Spinner />
             ) : (
               <button
-                className="border-2 border-blue text-white rounded-lg p-2"
+                className="border-2 border-blue text-white hover:bg-blue rounded-lg p-2"
                 disabled={!isFormValid}
                 type="submit"
               >

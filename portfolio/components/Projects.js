@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import ArrowBack from "./ArrowBack";
 import ArrowNext from "./ArrowNext";
 
 import Slider from "react-slick";
+const ReactSlick = dynamic(() => import("react-slick"), { ssr: false });
 
 {
   /*} React component called "Project" that displays a slider of 
@@ -145,7 +147,7 @@ const Project = ({
         {listProject.map((listProjects, index) => (
           <div className="px-3" key={index} id="projects">
             <div
-              className={`border-2 border-gray-500 hover:border-blue hover:bg-blur  transition-all rounded-lg flex flex-col ${
+              className={`border-2 border-gray-500 hover:border-blue hover:bg-blur transition-all rounded-lg flex flex-col ${
                 activeIndex === index ? "hover" : ""
               }`}
               style={cardStyle(listProjects.image)}

@@ -1,4 +1,4 @@
-//function to connect contact form to the server
+//function to contact form to the server
 //the API to make a POST request to the
 //"/api/contact" endpoint with the
 //form data in the body of the request

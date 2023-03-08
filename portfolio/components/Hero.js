@@ -6,13 +6,13 @@ const Hero = () => {
       id="background-container"
     >
       <div className="hero__content">
-        <h1 className="hero__title text-5xl text-white">
+        <h1 className="hero__title text-5xl tracking-wider text-white">
           Hello, I'm <span className="text-blue">Rafael</span>
         </h1>
         <p className="hero__subtitle text-white font-acumin tracking-wide text-2xl pt-3">
           I'm a Web Developer based in NYC
         </p>
-        <p className="text-sm text-white font-acumin tracking-wide font-thin pt-3">
+        <p className="text-sm text-white font-acumin tracking-widest font-thin pt-3">
           {" "}
           I'm passionate about building{" "}
           <span className="text-blue"> interactive</span> web applications.

@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-white p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-black-500 p-6">
       <Link href="/">
         <Logo />
       </Link>
@@ -66,8 +66,9 @@ const Navbar = () => {
           <Link
             key={item.name}
             href={item.href}
+            id={item.name}
             onClick={handleLinkClick}
-            className="block mt-4 md:inline-block font-acumin md:mt-0 md:ml-6"
+            className="block mt-4 md:inline-block text-white font-acumin tracking-widest md:mt-0 md:ml-6"
           >
             {item.name}
           </Link>
