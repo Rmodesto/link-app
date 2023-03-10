@@ -1,5 +1,5 @@
 import { Icon } from 'react-icons';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNextjs  } from 'react-icons/fa';
 
 const SocialLink = ({ url, type }) => {
   const getIcon = () => {
@@ -10,6 +10,7 @@ const SocialLink = ({ url, type }) => {
         return <FaLinkedin className="w-6 h-6" />;
       case 'twitter':
         return <FaTwitter className="w-6 h-6" />;
+  
       default:
         return null;
     }

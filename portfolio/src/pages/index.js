@@ -5,7 +5,7 @@ import About from "../../components/About";
 import Contact from "../../components/ContactForm";
 import Hero from "../../components/Hero";
 import Layout from "../../components/Layouts/Layout";
-import Projects from "../../components/Projects";
+import Project2 from "../../components/Project2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function Home() {
       <Layout>
         <Hero />
         <Vortex />
-        <Projects />
+        <Project2 />
         <About />
         <Contact />
       </Layout>
