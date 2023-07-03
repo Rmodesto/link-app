@@ -42,7 +42,9 @@ export default function HomePage() {
         width={96}
         height={96}
       />
-      <h1 className="font-bold mt-4 mb-8 placeholder:text-xl">{data.name}</h1>
+      <h1 className="font-bold mt-4 mb-8 text-white placeholder:text-xl">
+        {data.name}
+      </h1>
       {data.links.map((link) => {
         console.log(link);
         return <LinkCard href={link.href} key={link.href} {...link} />;
