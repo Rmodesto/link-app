@@ -1,5 +1,6 @@
 import Image from "next/image";
 import data from "../../data.json";
+import SocialIcons from "./SocialIcons";
 
 function LinkCard({
   href,
@@ -46,6 +47,7 @@ export default function HomePage() {
         console.log(link);
         return <LinkCard href={link.href} key={link.href} {...link} />;
       })}
+      <SocialIcons />
     </div>
   );
 }
